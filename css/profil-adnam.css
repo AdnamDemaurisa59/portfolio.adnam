@@ -272,6 +272,7 @@ body::before {
     }
 }
 
+
 .download-btn {
      display: inline-flex;
       align-items: center;
@@ -315,6 +316,37 @@ body::before {
     transform: translateY(-5px);
     color: black;
   }
+
+.cv-actions {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+}
+
+.view-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #ABB3A4;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 40px;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+    transition: all 0.3s ease-in-out;
+          text-decoration: none;
+
+}
+
+.view-btn:hover {
+    transform: translateY(-4px);
+    border-color: #009B3A;
+    color: black;
+    background: rgba(0, 155, 58, 0.08);
+}
 
 /* Scroll indicator amélioré */
 .scroll-indicator {
@@ -522,7 +554,7 @@ h2 {
 .skill-card h3 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
-    color: var(--color-yellow);
+    color: rgb(215, 63, 63);
 }
 
 /* Project Links */
@@ -728,9 +760,10 @@ textarea.form-input {
     text-align: center;
     padding: 2rem;
     transform: translateX(0);
+    -webkit-user-select: none;
     user-select: none;
     opacity: 0.8;
-    transition: all 0.3s ease;
+    transition: all 0.5s ease;
 }
 
 .skill-card:hover {
@@ -1764,6 +1797,10 @@ form textarea {
         display: none;
     }
 
+    .view-btn {
+        display: none;
+    }
+
 
 /* Conteneur principal */
 .skills-slider {
@@ -1780,7 +1817,7 @@ form textarea {
   
   /* Cartes des compétences */
   .skill-card {
-    display: none; /* Masquer toutes les compétences par défaut */
+    display: none; 
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
     cursor: pointer;
@@ -1819,7 +1856,29 @@ form textarea {
   .skill-mobile {
     display: none;
   }
-  
+
+  .mobile-cv-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 8px;
+  }
+
+  .view-btn-mobile {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 12px;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    background: rgba(0, 0, 0, 0.05);
+    font-weight: 600;
+  }
+
+  .view-btn-mobile:hover {
+    border-color: #009B3A;
+    color: #009B3A;
+  }
 
 }
 

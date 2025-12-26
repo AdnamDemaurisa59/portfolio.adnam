@@ -1,0 +1,14 @@
+{
+  "fr": {
+    "downloadCV": "Télécharger mon CV",
+    "cvFile": "../cv-dev-alternance/CV-DEV-AKD-ALT.pdf"
+  },
+  "ch": {
+    "downloadCV": "Télécharger mon CV (Suisse)",
+    "cvFile": "../cv-dev-alternance/CV-DEV-AKD-ALT-SWISS.pdf"
+  },
+  "en": {
+    "downloadCV": "Download my CV",
+    "cvFile": "../cv-dev-alternance/CV-DEV-AKD-ALT-EN.pdf"
+  }
+}
