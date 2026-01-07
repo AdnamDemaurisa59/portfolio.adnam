@@ -238,31 +238,6 @@
                     <p>Animations fluides (timelines, scroll, micro-interactions)</p>
                     </div>
 
-                  <div class="skill-card card skill-mobile">
-                    <a
-                        href="https://nextjs.org/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        title="Next.js"
-                        class="skill-icon"
-                    >
-                        <span class="nextjs-logo" aria-hidden="true">
-                        <span class="nextjs-text">NEXT</span><span class="nextjs-suffix">.js</span>
-                        </span>
-                    </a>
-
-                    <a
-                        href="https://nextjs.org/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        title="Next.js"
-                    ><h3>Next.js</h3></a>
-
-                    <p>Framework React full-stack (SSR/SSG, routing, API routes)</p>
-                    </div>
-
-
-
                     <div class="skill-card card">
                     <a
                         href="https://www.docker.com/"
@@ -455,8 +430,6 @@
                 <span class="dot" data-index="8"></span>
                 <span class="dot" data-index="9"></span>
                 <span class="dot" data-index="10"></span>
-                <span class="dot" data-index="11"></span>
-                <span class="dot" data-index="12"></span>
             </div>
         </div>
     </section>
@@ -675,27 +648,30 @@
     </script>
 
     <script>
-        const skillCards = document.querySelectorAll('.skill-card');
-        const dots = document.querySelectorAll('.carousel-nav .dot');
+        const isMobile = window.matchMedia("(max-width: 768px)");
+        if (isMobile.matches) {
+            const skillCards = document.querySelectorAll('.skill-card.skill-mobile');
+            const dots = document.querySelectorAll('.carousel-nav .dot');
 
-        function showSkill(index) {
-        // Masque toutes les compétences
-        skillCards.forEach(card => card.classList.remove('active'));
-        // Affiche la compétence sélectionnée
-        skillCards[index].classList.add('active');
+            function showSkill(index) {
+                // Masque toutes les compétences
+                skillCards.forEach(card => card.classList.remove('active'));
+                // Affiche la compétence sélectionnée
+                skillCards[index].classList.add('active');
 
-        // Met à jour les points actifs
-        dots.forEach(dot => dot.classList.remove('active'));
-        dots[index].classList.add('active');
+                // Met à jour les points actifs
+                dots.forEach(dot => dot.classList.remove('active'));
+                dots[index].classList.add('active');
+            }
+
+            // Ajoute des événements sur les points
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => showSkill(index));
+            });
+
+            // Affiche la première compétence par défaut
+            showSkill(0);
         }
-
-        // Ajoute des événements sur les points
-        dots.forEach((dot, index) => {
-        dot.addEventListener('click', () => showSkill(index));
-        });
-
-        // Affiche la première compétence par défaut
-        showSkill(0);
     </script>
 
 </body>

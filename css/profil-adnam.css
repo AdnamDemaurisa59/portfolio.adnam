@@ -1,5 +1,4 @@
 
-
 nav ul {
     list-style: none;
     display: flex;
@@ -109,6 +108,7 @@ body::before {
     max-width: 1200px;
     padding: 1rem 2rem;
     background: var(--glass-bg);
+    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     border-radius: 1rem;
     z-index: 1000;
@@ -426,6 +426,7 @@ h2 {
     border-radius: 1rem;
     padding: 2rem;
     border: 1px solid rgba(255, 255, 255, 0.1);
+    -webkit-backdrop-filter-: blur(10px);
     backdrop-filter: blur(10px);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
@@ -441,7 +442,6 @@ h2 {
 }
 
 /* Grilles modernisées */
-
 
 .project-image {
     width: 100%;
@@ -557,14 +557,14 @@ h2 {
     color: rgb(215, 63, 63);
 }
 
-/* Logo "NEXT.js" (wordmark) */
+/* Logo "NEXT.js" */
 .nextjs-logo{
   display: inline-flex;
   align-items: flex-start;
   line-height: 1;
   margin-bottom: 1.5rem;
 
-  /* même rendu que tes icônes */
+  /* même rendu que les icônes */
   background: var(--gradient-primary);
   -webkit-background-clip: text;
   background-clip: text;
@@ -572,17 +572,17 @@ h2 {
 }
 
 .nextjs-text{
-  font-size: 2rem;      /* même taille que .skill-card i */
+  font-size: 2rem;      
   font-weight: 500;
   letter-spacing: .04em;
 }
 
 .nextjs-suffix{
-  font-size: .9rem;     /* petit .js comme sur l'image */
+  font-size: .9rem;     
   font-weight: 500;
   letter-spacing: 0;
   margin-left: .12rem;
-  margin-top: .32rem;   /* remonte légèrement pour être en “haut à droite” */
+  margin-top: .32rem;   
 }
 
 
@@ -635,14 +635,6 @@ textarea.form-input {
         padding: 2rem 1.5rem;
     }
 
-    /* .project-links {
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    .project-link {
-        text-align: center;
-    } */
 }
 
 /* Ajout d'une section de présentation détaillée */
@@ -661,6 +653,7 @@ textarea.form-input {
     padding: 2rem;
     background: var(--glass-bg);
     border-radius: 1rem;
+    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
 }
 
@@ -676,24 +669,6 @@ textarea.form-input {
     color: var(--color-yellow);
     text-shadow: 0 0 10px rgba(255, 206, 0, 0.3);
 }
-
-/* Mise à jour des projets */
-/* .project-card::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    border: 2px solid transparent;
-    background: var(--gradient-primary);
-    -webkit-mask: 
-        linear-gradient(#fff 0 0) padding-box, 
-        linear-gradient(#fff 0 0);
-    mask: 
-        linear-gradient(#fff 0 0) padding-box, 
-        linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor;
-    mask-composite: exclude;
-    border-radius: 1rem;
-} */
 
 /* Ajout d'une timeline pour l'expérience */
 .timeline {
@@ -769,15 +744,6 @@ textarea.form-input {
     background: var(--color-yellow);
     color: var(--color-blue);
 }
-
-/* Skills Slider */
-/* .skills-slider {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    padding: 2rem 0;
-    margin: 0 auto;
-} */
 
 .skills-slider a {
     z-index: 10;

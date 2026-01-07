@@ -69,14 +69,6 @@ function initSkillsSlider() {
     });
 }
 
-// Appel la fonction au chargement de la page
-// initSkillsSlider();
-
-// Ce code permet de détecter le redimensionnement
-// window.addEventListener("resize", initSkillsSlider);
-
-// Ce code permet de détecter les changements dynamiques
-// isMobileSkills.addEventListener("change", initSkillsSlider);
 
 // Animation du hero
 function initHeroAnimation() {
