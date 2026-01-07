@@ -1346,46 +1346,156 @@ section:nth-child(even) .card {
 
 /* Section HTML - Projets */
 #projects {
-    padding-top: 20px;
-    padding-bottom: 35px;
+    padding: 60px 0;
+    background: #E1E6DB;
 }
 
 #projects h2 {
     font-size: 36px;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 12px;
+}
+
+.projects-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.carousel-inner {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 18px;
+}
+
+.project-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 18px;
+    background: #FCFBF8;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.14);
+    transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+.project-card::before {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    background: #D7D2D3;
+    border: 1px solid rgba(255,255,255,.60);
+    border-radius: 18px;
+    box-shadow: 0 18px 45px rgba(0,0,0,.10);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+
+    opacity: 0.7;
+    filter: blur(22px);
+    z-index: 0;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 28px 70px rgba(0, 0, 0, 0.18);
+    border-color: rgba(0, 155, 58, 0.2);
 }
 
 .project-card img {
-    width: 100%;
+    width: calc(100% - 24px);
     height: 200px;
     object-fit: cover;
-    border-bottom: 1px solid black;
+    border-radius: 16px;
+    margin: 14px 12px 0 12px;
+    border-bottom: none;
+    position: relative;
+    z-index: 1;
+    transition: transform 0.6s ease, filter 0.6s ease;
+}
+
+.project-card:hover img {
+    transform: scale(1.05);
+    filter: saturate(1.05) contrast(1.05);
 }
 
 .project-card h3 {
-    font-size: 24px;
-    margin: 10px 0;
+    font-size: 22px;
+    margin: 12px 16px 6px;
+    position: relative;
+    z-index: 1;
 }
 
 .project-card p {
-    padding: 0 10px;
-    /* margin-bottom: 20px; */
+    padding: 0 16px 12px;
+    position: relative;
+    z-index: 1;
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 0 16px 10px;
+    position: relative;
+    z-index: 1;
+}
+
+.project-tech span {
+    padding: 7px 10px;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: #0f1612;
 }
 
 .project-card .btn {
-    display: inline-block;
-    padding: 10px 20px;
-    margin: 10px 5px;
-    background: #D0C7BE;
-    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 11px 16px;
+    margin: 8px 12px 14px;
+    background: #D0B5B4;
+    color: #0d120f;
     text-decoration: none;
-    border-radius: 5px;
-    transition: background 0.3s;
+    border-radius: 14px;
+    font-weight: 700;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
+    position: relative;
+    z-index: 1;
+    border-radius: 999px;
+  font-weight: 800;
+  border: 1px solid transparent;
+  transition: transform .18s ease, filter .18s ease, background .18s ease;
+
 }
 
-.project-card .btn:hover {
-    background:  #b6aca2;
+/* Primaire (Voir le site) */
+.project-card .btn-primary{
+  color: #fff;
+  background: linear-gradient(90deg, #56A300, #ABAC00, #D95A00);
+  box-shadow: 0 10px 22px rgba(0,0,0,.14);
+}
+.project-card .btn-primary:hover{
+  filter: brightness(1.03);
+  transform: translateY(-3px);
+  filter: saturate(1.05);
+}
+
+/* Secondaire (Code source) */
+.project-card .btn-secondary{
+  color: rgba(0,0,0,.78);
+  background: rgba(255,255,255,.35);
+  border-color: rgba(0,0,0,.08);
+}
+.project-card .btn-secondary:hover{
+  background: rgba(255,255,255,.45);
+  transform: translateY(-3px);
+  filter: saturate(1.05);
+
 }
 
 
@@ -1590,7 +1700,7 @@ form textarea {
     .project-card {
         width: 350px; /* fixe la largeur de chaque carte */
         margin: 20px;
-        background: #CCB3B7;
+        background: #cdb4b8;
         border-radius: 10px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         overflow: hidden;
@@ -1970,7 +2080,7 @@ form textarea {
     .project-card {
         min-width: 300px; /* fixe la largeur de chaque carte */
         margin: 20px;
-        background: #CCB3B7;
+        background: #cdb4b8;
         border-radius: 10px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         overflow: hidden;
@@ -2053,7 +2163,7 @@ form textarea {
     .project-card {
         min-width: 300px; /* fixe la largeur de chaque carte */
         margin: 20px;
-        background: #CCB3B7;
+        background: #cdb4b8;
         border-radius: 10px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         overflow: hidden;
