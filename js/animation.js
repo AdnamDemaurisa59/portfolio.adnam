@@ -39,7 +39,7 @@ function initSkillsSlider() {
     // Animation de défilement
     gsap.to(track, {
         x: `-=${track.offsetWidth / 2}`,
-        duration: 20,
+        duration: 35,
         ease: "none",
         repeat: -1,
         modifiers: {

@@ -1,238 +1,272 @@
 
-
   /* @import url('https://fonts.googleapis.com/css?family=Roboto:700,900'); */
-  
-  body {
-    /* background: radial-gradient(#fff, #aaa); */
-    background-size: 100vw 100vh; 
-    background-color: #C7BFBD;
-    overflow: hidden;
-    padding-top: 40vh;
-  }
 
-  :root {
-    --color-green: #009B3A;
-    --color-yellow: #FFD700;
-    --color-red: #EE2737;
-    --gradient-primary: linear-gradient(120deg, var(--color-green), var(--color-red));
-    --gradient-secondary: linear-gradient(45deg, var(--color-yellow), var(--color-green));
-    --gradient-accent: linear-gradient(60deg, var(--color-red), var(--color-yellow));
-  }
-  
-  .name {
-    text-align: center;
-    /* font-family: 'Roboto'; */
-    font-family: "Bebas Neue", sans-serif;
-    /* font-size: 12vmin; */
-    font-size: 35px;
-    font-weight: 700;
-    /* margin-bottom: 40px; */
-    animation: shadow_style 3s infinite;
-    outline: none;
-    /* white-space: nowrap; */
-    /* color: #889dcc; */
+  :root{
+  /* Couleurs de fond */
+  --bg: #BCBAB4;
+  --bg-tint-top: #A7B09C;    /* teinte verte en haut */
+  --bg-tint-edge: #C4AAA8;   /* teinte rosée légère */
 
-    line-height: 1.1;
-    /* text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2); */
-    display: block;
-    /* margin-bottom: 1rem; */
-    margin-bottom: 40px ;
+  /* Carte (glass) */
+  --card: rgba(175,184,169,.28);
+  --card-border: rgba(255,255,255,.22);
+  --card-shadow: 0 22px 60px rgba(0,0,0,.18);
 
-  }
-  .name div {
-    position: absolute;
-    color: transparent;
-    background: linear-gradient(
-        45deg,
-        var(--color-green) 0%,
-        var(--color-yellow) 50%,
-        var(--color-red) 100%
-    );
-    -webkit-background-clip: text;
-    background-clip: text;
-    width: 100%;
-  }
+  /* Texte */
+  --text: rgba(255,255,255,.92);
+  --muted: rgba(255,255,255,.72);
 
-  .name::after {
-    content: "ADNAM KOUD DEMAURISA \A DEVELOPPEUR FRONT-END";
-    color: transparent;
-    white-space: pre;
-    text-shadow: rgb(170, 170, 170) 1px 1px, rgb(170, 170, 170) 2px 2px, rgb(170, 170, 170) 3px 3px, rgb(170, 170, 170) 4px 4px, rgb(170, 170, 170) 5px 5px, rgb(170, 170, 170) 6px 6px, rgb(170, 170, 170) 7px 7px, rgb(170, 170, 170) 8px 8px, rgb(170, 170, 170) 9px 9px, rgb(170, 170, 170) 10px 10px;
-  }
+  /* Dégradé accent (branding) */
+  --g: #56A300;
+  --y: #ABAC00;
+  --o: #D95A00;
 
+  /* Progressbar */
+  --track: rgba(0,0,0,.12);       /* piste */
+  --track-gloss: rgba(255,255,255,.20); /* reflet */
 
-
-  
-  @keyframes shadow_style {
-    0% {
-      /* color:#f3f3f3; */
-      /* text-shadow: 
-      1px 1px #aaa,
-      2px 2px #aaa,
-      3px 3px #aaa,
-      4px 4px #aaa,
-      5px 5px #aaa; */
-      /* color: #889dcc; */
-      --color-green: #009B3A;
-      --color-yellow: #FFD700;
-      --color-red: #EE2737;
-      transform: scale(1.5, 1.5);
-    }
-    10% {
-        /* text-shadow: 
-      1px 1px #aaa,
-      2px 2px #aaa,
-      3px 3px #aaa,
-      4px 4px #aaa,
-      5px 5px #aaa; */
-      /* color:#f3f3f3; */
-      /* color: #788dbb; */
-      --color-green: #009B3A;
-      --color-yellow: #FFD700;
-      --color-red: #EE2737;
-      transform: scale(1.5, 1.5);
-    }
-    15% {
-        /* text-shadow: 
-      1px 1px #aaa,
-      1px 1px #aaa,
-      2px 2px #aaa; */
-       /* color: #6479a7; */
-       --color-green: #009B3A;
-       --color-yellow: #FFD700;
-       --color-red: #EE2737;
-    }
-    20% { 
-        /* text-shadow: 
-        1px 1px #aaa,
-        2px 2px #aaa,
-        3px 3px #aaa,
-        4px 4px #aaa,
-        5px 5px #aaa;    */
-      /* color:#4e6695; */
-      --color-green: #009B3A;
-      --color-yellow: #FFD700;
-      --color-red: #EE2737;
-      transform: scale(1.1, 1.1);
-    }
-    75% {
-        /* text-shadow: 
-        1px 1px #aaa,
-        2px 2px #aaa,
-        3px 3px #aaa,
-        4px 4px #aaa,
-        5px 5px #aaa; */
-      opacity: 1;
-    }
-    80% {
-        /* text-shadow: 
-        1px 1px #aaa,
-        2px 2px #aaa,
-        3px 3px #aaa,
-        4px 4px #aaa,
-        5px 5px #aaa; */
-      opacity: 0;    
-      /* color:#3A5C9F; */
-      --color-green: #009B3A;
-      --color-yellow: #FFD700;
-      --color-red: #EE2737;
-      transform: scale(0.85, 0.9);
-    }
-    
-    100% {
-      text-shadow: none; /* Assure la suppression des ombres */
-      opacity: 0;
-    }
-  }
-
-/* Masque le bouton à la fin de l'animation de la class "name" */
-.hidden {
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
-  pointer-events: none; /* Empêche l'interaction utilisateur */
+  /* Arrondis */
+  --radius: 22px;
 }
 
-  .container {
-    text-align: center;
-  }
-  
-  .container a {
-    color: #fff;
-    text-decoration: none;
-  }
-  
-  /* Bouton */
-  .portfolio-button {
-    padding: 1rem 2rem;
-    font-size: 1.2rem;
-    /* color: #fff; */
-    background: #B2BCAD;
-    border: none;
-    border-radius: 40px;
-    cursor: pointer;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-    transition: all 0.3s ease-in-out;
-    position: relative;
-    overflow: hidden;
-    display: inline-block;
-  }
+*{ box-sizing: border-box; }
+html,body{ height:100%; }
 
-  .portfolio-button::before {
-    content: "";
-    position: absolute;
-    border-radius: 40px;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.3);
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.8s ease-in-out;
-  }
-  
-  .portfolio-button:hover::before {
-    transform: scaleX(1);
-  }
-  
-  .portfolio-button:hover {
-    background: #C2C8C2;
-    transform: translateY(-5px);
-  }
-  
-  /* Animation de fade-in */
-  @keyframes fadeIn {
-    0% {
-      opacity: 0;
-      transform: translateY(-20px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-@media screen and (max-width: 768px) {
-  .name {
-    font-size: 23px;
-  }
+/* Fond global (dégradé + taches légères) */
+body{
+  margin:0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+  color: var(--text);
 
-  .portfolio-button {
-    padding: 0.9rem 1rem;
-    font-size: 1rem;
-  }
+  background:
+    radial-gradient(900px 500px at 30% 10%, rgba(86,163,0,.12), transparent 60%),
+    radial-gradient(900px 600px at 85% 30%, rgba(217,90,0,.12), transparent 65%),
+    radial-gradient(1100px 700px at 60% 80%, rgba(255,255,255,.10), transparent 65%),
+    linear-gradient(180deg, var(--bg-tint-top), var(--bg));
+
+  overflow:hidden;
+  display:grid;
+  place-items:center;
+  padding: 24px;
 }
 
-@media screen and (min-width: 768px) and (max-width: 979px) {
-  .name {
-    font-size: 30px;
-  }
-
-  .portfolio-button {
-    padding: 1rem 1.5rem;
-    font-size: 1.1rem;
-  }
-  
+/* Vignette (assombrit les bords) */
+body::before{
+  content:"";
+  position: fixed;
+  inset: 0;
+  pointer-events:none;
+  background: radial-gradient(1100px 780px at 50% 50%, transparent 52%, rgba(0,0,0,.18) 100%);
+  opacity:.55;
 }
 
+/* Carte du loader */
+.loader-card{
+  width: min(540px, 92vw);
+  padding: 34px 34px 26px;
+  border-radius: var(--radius);
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  box-shadow: var(--card-shadow);
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+  position: relative;
+  text-align: center;
+}
 
+/* Reflet en haut de la carte */
+.loader-card::after{
+  content:"";
+  position:absolute;
+  left: 10px; right: 10px; top: 10px;
+  height: 36%;
+  border-radius: calc(var(--radius) - 10px);
+  background: linear-gradient(180deg, rgba(255,255,255,.16), transparent 65%);
+  pointer-events:none;
+  opacity: .35;
+}
+
+/* Conteneur logo (sert pour halo + anneau) */
+.logo-wrap{
+  width: 118px;
+  height: 118px;
+  margin: 0 auto 16px;
+  position: relative;
+  display:grid;
+  place-items:center;
+  border-radius: 999px;
+  isolation: isolate;
+}
+
+/* Halo derrière le logo */
+.logo-wrap::before{
+  content:"";
+  position:absolute;
+  inset:-18px;
+  border-radius:999px;
+  background: radial-gradient(circle,
+    rgba(86,163,0,.22),
+    rgba(171,172,0,.12) 45%,
+    rgba(217,90,0,.10) 70%,
+    transparent 78%
+  );
+  filter: blur(1px);
+  animation: halo 2.2s ease-in-out infinite;
+  z-index: 0;
+}
+
+/* Anneau gradient qui tourne */
+.logo-wrap::after{
+  content:"";
+  position:absolute;
+  inset:-8px;
+  border-radius:999px;
+  background: conic-gradient(from 0deg, var(--g), var(--y), var(--o), var(--g));
+  animation: spin 2.4s linear infinite;
+  z-index: 1;
+
+  /* Masque: J'enlève le centre pour faire un anneau */
+  -webkit-mask: radial-gradient(circle, transparent 56%, #000 58%);
+  mask: radial-gradient(circle, transparent 56%, #000 58%);
+
+  box-shadow: 0 0 0 8px rgba(0,0,0,.06) inset;
+  opacity: .92;
+}
+
+/* Bloc du logo (image) */
+.logo{
+  width: 74px;
+  height: 74px;
+  border-radius: 16px;
+  background: rgba(255,255,255,.92);
+  box-shadow: 0 14px 30px rgba(0,0,0,.20);
+  display:grid;
+  place-items:center;
+  overflow:hidden;
+  z-index: 2;
+}
+
+/* Image du logo */
+.logo img{
+  width: 90%;
+  height: 90%;
+  object-fit: contain;
+  display:block;
+}
+
+/* Ligne "CHARGEMENT" */
+.status{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap: 8px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: .10em;
+  font-weight: 900;
+  font-size: 12px;
+  color: rgba(86,163,0,.95);
+  text-shadow: 0 4px 10px rgba(0,0,0,.12);
+  position: relative;
+  z-index: 2;
+}
+
+/* Point animé */
+.dot{
+  width: 9px;
+  height: 9px;
+  border-radius: 999px;
+  background: var(--y);
+  box-shadow: 0 0 0 6px rgba(171,172,0,.12);
+  animation: blink 1.05s ease-in-out infinite;
+}
+
+/* Titre */
+h1{
+  margin: 0;
+  font-size: 22px;
+  line-height: 1.25;
+  font-weight: 900;
+  color: var(--text);
+  text-shadow: 0 10px 18px rgba(0,0,0,.18);
+  position: relative;
+  z-index: 2;
+}
+
+/* Slogan */
+.subtitle{
+  margin: 14px 0 24px;
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--muted);
+  letter-spacing: .02em;
+  text-shadow: 0 6px 14px rgba(0,0,0,.12);
+  position: relative;
+  z-index: 2;
+}
+
+/* Piste de la barre */
+.progress{
+  height: 8px;
+  border-radius: 999px;
+  background: var(--track);
+  overflow:hidden;
+  position: relative;
+  z-index: 2;
+}
+
+/* Reflet sur la piste */
+.progress::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: linear-gradient(180deg, var(--track-gloss), transparent 60%);
+  opacity: .35;
+  pointer-events:none;
+}
+
+/* Barre indeterminate (aller/retour) */
+.bar{
+  position:absolute;
+  top:0; bottom:0;
+  left: -40%;
+  width: 40%;
+  border-radius: 999px;
+
+  /* Dégradé du thème */
+  background: linear-gradient(90deg, var(--g), var(--y), var(--o));
+  filter: saturate(1.05);
+  animation: indeterminate 1.55s ease-in-out infinite;
+  box-shadow: 0 0 18px rgba(86,163,0,.18);
+}
+
+/* Barre: déplacement + largeur variable */
+@keyframes indeterminate{
+  0%   { left: -40%; width: 40%; }
+  35%  { width: 58%; }
+  50%  { left: 64%; width: 42%; }
+  85%  { width: 60%; }
+  100% { left: -40%; width: 40%; }
+}
+
+/* Point: pulse */
+@keyframes blink{
+  0%,100%{ transform: scale(1); opacity: 1; }
+  50%{ transform: scale(.72); opacity: .55; }
+}
+
+/* Halo: respiration */
+@keyframes halo{
+  0%,100%{ transform: scale(1); opacity: .9; }
+  50%{ transform: scale(1.06); opacity: .6; }
+}
+
+/* Anneau: rotation */
+@keyframes spin{
+  to{ transform: rotate(360deg); }
+}
+
+/* Accessibilité */
+@media (prefers-reduced-motion: reduce){
+  *{ animation: none !important; transition: none !important; }
+}

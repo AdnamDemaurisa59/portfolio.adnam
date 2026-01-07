@@ -24,37 +24,35 @@
 </head>
 <body>
 
-    <div class="container">
-        <div class="name">
-            <div>ADNAM KOUD DEMAURISA <br>DEVELOPPEUR FRONT-END</div>
-        </div>
-        <a href="./html/profil-adnam.html" title="" class="portfolio-button">Cliquer pour accéder à mon portfolio</a>
-        <!-- <button class="portfolio-button">Cliquer pour accéder à mon portfolio</button> -->
+    <div class="loader-card" role="status" aria-label="Chargement">
+    <div class="logo-wrap">
+      <div class="logo">
+        <!-- remplace par ton logo -->
+        <img src="./img/photo-tete-adnam.png" alt="Photo Adnam" />
+      </div>
     </div>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-          const nameElement = document.querySelector(".name");
-          const buttonElement = document.querySelector(".portfolio-button");
-      
-          nameElement.addEventListener("animationend", function() {
-            // Ajout de la classe pour masquer le bouton
-            buttonElement.classList.add("hidden");
-          });
-      
-          // Redirection après 3 secondes
+    <div class="status">
+      <span class="dot" aria-hidden="true"></span>
+      <span>CHARGEMENT</span>
+    </div>
+
+    <h1>ADNAM KOUD DEMAURISA <br>DEVELOPPEUR FULL-STACK</h1>
+    <div class="subtitle">Concevoir • Développer • Déployer</div>
+
+    <div class="progress" aria-label="Barre de chargement">
+      <div class="bar"></div>
+    </div>
+  </div>
+
+    
+
+  <script>
+       // Redirection après 3 secondes
           setTimeout(function() {
             window.location.href = "./html/profil-adnam.html";
-          }, 2000);
-      
-        // Détecte si la page a été chargée depuis l'historique (bouton retour) (Fonctionne sur Safari et Firefox)
-        window.onpageshow = function(event) {
-            if (event.persisted) {
-                window.location.reload(); 
-            }
-        };
-        });
-      </script>
+          }, 3000);
+  </script>
 
     <!-- <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script> -->
     <!-- <script src="./script.js"></script> -->
